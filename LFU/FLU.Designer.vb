@@ -233,7 +233,7 @@ Partial Class LFU
         Me.block3.ReadOnly = True
         Me.block3.Size = New System.Drawing.Size(90, 13)
         Me.block3.TabIndex = 8
-        Me.block3.Text = "D"
+        Me.block3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'block2
         '
@@ -245,7 +245,7 @@ Partial Class LFU
         Me.block2.ReadOnly = True
         Me.block2.Size = New System.Drawing.Size(90, 13)
         Me.block2.TabIndex = 7
-        Me.block2.Text = "C"
+        Me.block2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'block1
         '
@@ -257,7 +257,7 @@ Partial Class LFU
         Me.block1.ReadOnly = True
         Me.block1.Size = New System.Drawing.Size(90, 13)
         Me.block1.TabIndex = 6
-        Me.block1.Text = "B"
+        Me.block1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'block0
         '
@@ -269,7 +269,7 @@ Partial Class LFU
         Me.block0.ReadOnly = True
         Me.block0.Size = New System.Drawing.Size(90, 13)
         Me.block0.TabIndex = 5
-        Me.block0.Text = "A"
+        Me.block0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox1
         '
