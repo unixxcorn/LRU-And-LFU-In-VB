@@ -1,0 +1,13 @@
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\bin\Release\LFU LRU Simulator.exe.config
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\bin\Release\LFU LRU Simulator.exe
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\bin\Release\LFU LRU Simulator.pdb
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\bin\Release\LFU LRU Simulator.xml
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFULRUSimulator.LFU.resources
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFULRUSimulator.LRU.resources
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFULRUSimulator.Main.resources
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFULRUSimulator.Resources.resources
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFU.vbproj.GenerateResource.cache
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFU.vbproj.CoreCompileInputs.cache
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFU LRU Simulator.exe
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFU LRU Simulator.xml
+D:\Project\58\LRU-And-LFU-In-VB-0.1-unstable\source\obj\Release\LFU LRU Simulator.pdb
