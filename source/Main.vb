@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub LRUbut_Click(sender As Object, e As EventArgs) Handles LRUbut.Click
-        'LRU.ShowDialog()
+        LRU.ShowDialog()
     End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs)
