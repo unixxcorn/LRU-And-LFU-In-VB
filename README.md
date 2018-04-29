@@ -1,3 +1,3 @@
-![](/Resource/logo_1.png)
+![](/Resource/pic/logo_1.png)
 
-# ![](/Resource/Home.png)
+# ![](/Resource/pic/Home.png)
