@@ -2,131 +2,111 @@
     Dim counter As Integer = 0
     Dim InputData As Char
     Dim DataArray(3) As String
+    Dim count(3) As Integer
     Dim Table(3, 10) As String
+    Dim order(3) As Integer
+    Dim bool(3) As Boolean
 
     Private Sub NextBut_Click(sender As Object, e As EventArgs) Handles NextBut.Click
         Input.ReadOnly = True
+        NextBut.Text = "Next"
+
         If Input.Text.Length > counter Then
             InputData = Input.Text.Chars(counter)
             lastData.Text = InputData
             counter = counter + 1
             counter_text.Text = Convert.ToString(counter)
+            Dim IsExiest As Boolean = False
+            For var As Integer = 0 To 3
+                If DataArray(var) = InputData Then
+                    count(var) = count(var) + 1
+                    IsExiest = True
+                End If
+            Next
 
-            If DataArray(0) = InputData Then
-                blockc0.Text = blockc0.Text + 1
-            ElseIf DataArray(1) = InputData Then
-                blockc1.Text = blockc1.Text + 1
-            ElseIf DataArray(2) = InputData Then
-                blockc2.Text = blockc2.Text + 1
-            ElseIf DataArray(3) = InputData Then
-                blockc3.Text = blockc3.Text + 1
+            If Not (IsExiest) Then
+                Dim DupMinF As Boolean = False
+                Dim DupMini As Boolean = False
+                Dim Minimum As Integer = 99999
+                Dim MinIndex As Integer = 0
+                bool = {False, False, False, False}
+                For x = 0 To 3
+                    If count(x) = 0 Then
+                        bool(x) = True
+                    End If
+                Next
+                ' Find min frequency (count)
+                For x As Integer = 0 To 3
+                    If Minimum > count(x) Then
+                        Minimum = count(x)
+                        MinIndex = x
+                    ElseIf Minimum = count(x) Then
+                        DupMinF = True
+                    End If
+                Next
+                For x = 0 To 3
+                    Dim tempo As Integer = 0
+                    For y = 0 To 3
+                        If count(x) = count(y) And count(x) = Minimum Then
+                            tempo = tempo + 1
+                        End If
+                    Next
+                    If tempo > 1 Then
+                        bool(x) = True
+                    End If
+                Next
+                If DupMinF Then
+                    Dim old As Integer = 99999
+                    Dim oldIndex As Integer = 0
+                    ' Find oldest value
+                    For x As Integer = 0 To 3
+                        If old > order(x) And bool(x) Then
+                            old = order(x)
+                            oldIndex = x
+                        End If
+                    Next
+                    DataArray(oldIndex) = InputData
+                    count(oldIndex) = 1
+                    order(oldIndex) = counter
+                Else
+                    DataArray(MinIndex) = InputData
+                    count(MinIndex) = 1
+                    order(MinIndex) = counter
+                End If
 
-            ElseIf Convert.ToInt32(blockc0.Text) < Convert.ToInt32(blockc1.Text) And
-                   Convert.ToInt32(blockc0.Text) < Convert.ToInt32(blockc2.Text) And
-                   Convert.ToInt32(blockc0.Text) < Convert.ToInt32(blockc3.Text) Then
-                DataArray(0) = InputData
 
-                blockc0.Text = 1
-                order0.Text = counter
-                block0.Text = InputData
-            ElseIf Convert.ToInt32(blockc1.Text) < Convert.ToInt32(blockc0.Text) And
-                   Convert.ToInt32(blockc1.Text) < Convert.ToInt32(blockc2.Text) And
-                   Convert.ToInt32(blockc1.Text) < Convert.ToInt32(blockc3.Text) Then
-                DataArray(1) = InputData
-
-                blockc1.Text = 1
-                order1.Text = counter
-                block1.Text = InputData
-            ElseIf Convert.ToInt32(blockc2.Text) < Convert.ToInt32(blockc0.Text) And
-                   Convert.ToInt32(blockc2.Text) < Convert.ToInt32(blockc1.Text) And
-                   Convert.ToInt32(blockc2.Text) < Convert.ToInt32(blockc3.Text) Then
-                DataArray(2) = InputData
-
-                blockc2.Text = 1
-                order2.Text = counter
-                block2.Text = InputData
-            ElseIf Convert.ToInt32(blockc3.Text) < Convert.ToInt32(blockc0.Text) And
-                   Convert.ToInt32(blockc3.Text) < Convert.ToInt32(blockc1.Text) And
-                   Convert.ToInt32(blockc3.Text) < Convert.ToInt32(blockc2.Text) Then
-                DataArray(3) = InputData
-
-                blockc3.Text = 1
-                order3.Text = counter
-                block3.Text = InputData
-
-            ElseIf Convert.ToInt32(order0.Text) <= Convert.ToInt32(order1.Text) And
-                   Convert.ToInt32(order0.Text) <= Convert.ToInt32(order2.Text) And
-                   Convert.ToInt32(order0.Text) <= Convert.ToInt32(order3.Text) Then
-                DataArray(0) = InputData
-
-                blockc0.Text = 1
-                order0.Text = counter
-                block0.Text = InputData
-            ElseIf Convert.ToInt32(order1.Text) <= Convert.ToInt32(order0.Text) And
-                   Convert.ToInt32(order1.Text) <= Convert.ToInt32(order2.Text) And
-                   Convert.ToInt32(order1.Text) <= Convert.ToInt32(order3.Text) Then
-                DataArray(1) = InputData
-
-                blockc1.Text = 1
-                order1.Text = counter
-                block1.Text = InputData
-            ElseIf Convert.ToInt32(order2.Text) <= Convert.ToInt32(order0.Text) And
-                   Convert.ToInt32(order2.Text) <= Convert.ToInt32(order1.Text) And
-                   Convert.ToInt32(order2.Text) <= Convert.ToInt32(order3.Text) Then
-                DataArray(2) = InputData
-
-                blockc2.Text = 1
-                order2.Text = counter
-                block2.Text = InputData
-            ElseIf Convert.ToInt32(order3.Text) <= Convert.ToInt32(order0.Text) And
-                   Convert.ToInt32(order3.Text) <= Convert.ToInt32(order1.Text) And
-                   Convert.ToInt32(order3.Text) <= Convert.ToInt32(order2.Text) Then
-                DataArray(3) = InputData
-
-                blockc3.Text = 1
-                order3.Text = counter
-                block3.Text = InputData
 
             End If
+
+            Dim temp = (counter - 1) Mod 7
+            If Not (temp > 0) Then
+                For y As Integer = 0 To 6
+                    For x As Integer = 0 To 3
+                        Table(x, y) = ""
+                    Next
+                Next
+            End If
+
+            For x As Integer = 0 To 3
+                Table(x, temp) = DataArray(x)
+            Next
+
         Else
             MsgBox("End")
         End If
-        Dim temp = (counter - 1) Mod 7
-        If Not (temp > 0) Then
-            Table(0, 0) = ""
-            Table(1, 0) = ""
-            Table(2, 0) = ""
-            Table(3, 0) = ""
-            Table(0, 1) = ""
-            Table(1, 1) = ""
-            Table(2, 1) = ""
-            Table(3, 1) = ""
-            Table(0, 2) = ""
-            Table(1, 2) = ""
-            Table(2, 2) = ""
-            Table(3, 2) = ""
-            Table(0, 3) = ""
-            Table(1, 3) = ""
-            Table(2, 3) = ""
-            Table(3, 3) = ""
-            Table(0, 4) = ""
-            Table(1, 4) = ""
-            Table(2, 4) = ""
-            Table(3, 4) = ""
-            Table(0, 5) = ""
-            Table(1, 5) = ""
-            Table(2, 5) = ""
-            Table(3, 5) = ""
-            Table(0, 6) = ""
-            Table(1, 6) = ""
-            Table(2, 6) = ""
-            Table(3, 6) = ""
-        End If
-        Table(0, temp) = DataArray(0)
-        Table(1, temp) = DataArray(1)
-        Table(2, temp) = DataArray(2)
-        Table(3, temp) = DataArray(3)
 
+        block0.Text = DataArray(0)
+        block1.Text = DataArray(1)
+        block2.Text = DataArray(2)
+        block3.Text = DataArray(3)
+        blockc0.Text = count(0)
+        blockc1.Text = count(1)
+        blockc2.Text = count(2)
+        blockc3.Text = count(3)
+        order0.Text = order(0)
+        order1.Text = order(1)
+        order2.Text = order(2)
+        order3.Text = order(3)
         TextBox000.Text = Table(0, 0)
         TextBox100.Text = Table(1, 0)
         TextBox200.Text = Table(2, 0)
@@ -163,6 +143,7 @@
     End Sub
 
     Private Sub ClearBut_Click(sender As Object, e As EventArgs) Handles ClearBut.Click
+        NextBut.Text = "Simulate"
         Input.ReadOnly = False
         counter = 0
         counter_text.Text = Convert.ToString(counter)
@@ -194,47 +175,28 @@
         TextBox106.Text = ""
         TextBox206.Text = ""
         TextBox306.Text = ""
-        Table(0, 0) = ""
-        Table(1, 0) = ""
-        Table(2, 0) = ""
-        Table(3, 0) = ""
-        Table(0, 1) = ""
-        Table(1, 1) = ""
-        Table(2, 1) = ""
-        Table(3, 1) = ""
-        Table(0, 2) = ""
-        Table(1, 2) = ""
-        Table(2, 2) = ""
-        Table(3, 2) = ""
-        Table(0, 3) = ""
-        Table(1, 3) = ""
-        Table(2, 3) = ""
-        Table(3, 3) = ""
-        Table(0, 4) = ""
-        Table(1, 4) = ""
-        Table(2, 4) = ""
-        Table(3, 4) = ""
-        Table(0, 5) = ""
-        Table(1, 5) = ""
-        Table(2, 5) = ""
-        Table(3, 5) = ""
-        Table(0, 6) = ""
-        Table(1, 6) = ""
-        Table(2, 6) = ""
-        Table(3, 6) = ""
+        For y As Integer = 0 To 6
+            For x As Integer = 0 To 3
+                Table(x, y) = ""
+            Next
+        Next
+        For i As Integer = 0 To 3
+            count(i) = 0
+            order(i) = 0
+            DataArray(i) = ""
+        Next
         order0.Text = 0
         order1.Text = 0
         order2.Text = 0
         order3.Text = 0
-        DataArray(0) = ""
-        DataArray(1) = ""
-        DataArray(2) = ""
-        DataArray(3) = ""
         blockc0.Text = 0
         blockc1.Text = 0
         blockc2.Text = 0
         blockc3.Text = 0
+        block0.Text = ""
+        block1.Text = ""
+        block2.Text = ""
+        block3.Text = ""
     End Sub
-
 
 End Class

@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("WindowsApp1")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("WindowsApp1")>
-<Assembly: AssemblyCopyright("Copyright ©  2018")>
+<Assembly: AssemblyTitle("LRU LFU Simulator")>
+<Assembly: AssemblyDescription("Simulate LRU and LFU for education")>
+<Assembly: AssemblyCompany("IT KMITL")>
+<Assembly: AssemblyProduct("LRU LFU Simulator")>
+<Assembly: AssemblyCopyright("")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' by using the '*' as shown below:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.1.0.0")>
 <Assembly: AssemblyFileVersion("1.0.0.0")>

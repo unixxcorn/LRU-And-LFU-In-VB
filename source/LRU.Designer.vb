@@ -62,12 +62,12 @@ Partial Class LRU
         Me.TextBox02 = New System.Windows.Forms.TextBox()
         Me.ButtonNext = New System.Windows.Forms.Button()
         Me.PanelSummary = New System.Windows.Forms.Panel()
-        Me.TextBox_Index = New System.Windows.Forms.TextBox()
-        Me.TextBox_Index2 = New System.Windows.Forms.TextBox()
-        Me.TextBox_Page = New System.Windows.Forms.TextBox()
-        Me.TextBox_Page2 = New System.Windows.Forms.TextBox()
-        Me.TextBox_LR = New System.Windows.Forms.TextBox()
         Me.TextBox_LR2 = New System.Windows.Forms.TextBox()
+        Me.TextBox_LR = New System.Windows.Forms.TextBox()
+        Me.TextBox_Page2 = New System.Windows.Forms.TextBox()
+        Me.TextBox_Page = New System.Windows.Forms.TextBox()
+        Me.TextBox_Index2 = New System.Windows.Forms.TextBox()
+        Me.TextBox_Index = New System.Windows.Forms.TextBox()
         Me.PanelGrid.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel5.SuspendLayout()
@@ -520,44 +520,14 @@ Partial Class LRU
         Me.PanelSummary.Size = New System.Drawing.Size(231, 136)
         Me.PanelSummary.TabIndex = 6
         '
-        'TextBox_Index
+        'TextBox_LR2
         '
-        Me.TextBox_Index.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox_Index.Location = New System.Drawing.Point(3, 6)
-        Me.TextBox_Index.Name = "TextBox_Index"
-        Me.TextBox_Index.ReadOnly = True
-        Me.TextBox_Index.Size = New System.Drawing.Size(109, 13)
-        Me.TextBox_Index.TabIndex = 1
-        Me.TextBox_Index.Text = "Page Number"
-        '
-        'TextBox_Index2
-        '
-        Me.TextBox_Index2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox_Index2.Location = New System.Drawing.Point(118, 6)
-        Me.TextBox_Index2.Name = "TextBox_Index2"
-        Me.TextBox_Index2.ReadOnly = True
-        Me.TextBox_Index2.Size = New System.Drawing.Size(109, 13)
-        Me.TextBox_Index2.TabIndex = 0
-        Me.TextBox_Index2.Text = "0"
-        '
-        'TextBox_Page
-        '
-        Me.TextBox_Page.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox_Page.Location = New System.Drawing.Point(3, 25)
-        Me.TextBox_Page.Name = "TextBox_Page"
-        Me.TextBox_Page.ReadOnly = True
-        Me.TextBox_Page.Size = New System.Drawing.Size(109, 13)
-        Me.TextBox_Page.TabIndex = 2
-        Me.TextBox_Page.Text = "Current Page"
-        '
-        'TextBox_Page2
-        '
-        Me.TextBox_Page2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox_Page2.Location = New System.Drawing.Point(118, 25)
-        Me.TextBox_Page2.Name = "TextBox_Page2"
-        Me.TextBox_Page2.ReadOnly = True
-        Me.TextBox_Page2.Size = New System.Drawing.Size(109, 13)
-        Me.TextBox_Page2.TabIndex = 3
+        Me.TextBox_LR2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_LR2.Location = New System.Drawing.Point(118, 44)
+        Me.TextBox_LR2.Name = "TextBox_LR2"
+        Me.TextBox_LR2.ReadOnly = True
+        Me.TextBox_LR2.Size = New System.Drawing.Size(100, 13)
+        Me.TextBox_LR2.TabIndex = 5
         '
         'TextBox_LR
         '
@@ -570,20 +540,50 @@ Partial Class LRU
         Me.TextBox_LR.TabIndex = 4
         Me.TextBox_LR.Text = "Least Recently"
         '
-        'TextBox_LR2
+        'TextBox_Page2
         '
-        Me.TextBox_LR2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox_LR2.Location = New System.Drawing.Point(118, 44)
-        Me.TextBox_LR2.Name = "TextBox_LR2"
-        Me.TextBox_LR2.ReadOnly = True
-        Me.TextBox_LR2.Size = New System.Drawing.Size(100, 13)
-        Me.TextBox_LR2.TabIndex = 5
+        Me.TextBox_Page2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Page2.Location = New System.Drawing.Point(118, 25)
+        Me.TextBox_Page2.Name = "TextBox_Page2"
+        Me.TextBox_Page2.ReadOnly = True
+        Me.TextBox_Page2.Size = New System.Drawing.Size(109, 13)
+        Me.TextBox_Page2.TabIndex = 3
+        '
+        'TextBox_Page
+        '
+        Me.TextBox_Page.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Page.Location = New System.Drawing.Point(3, 25)
+        Me.TextBox_Page.Name = "TextBox_Page"
+        Me.TextBox_Page.ReadOnly = True
+        Me.TextBox_Page.Size = New System.Drawing.Size(109, 13)
+        Me.TextBox_Page.TabIndex = 2
+        Me.TextBox_Page.Text = "Current Page"
+        '
+        'TextBox_Index2
+        '
+        Me.TextBox_Index2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Index2.Location = New System.Drawing.Point(118, 6)
+        Me.TextBox_Index2.Name = "TextBox_Index2"
+        Me.TextBox_Index2.ReadOnly = True
+        Me.TextBox_Index2.Size = New System.Drawing.Size(109, 13)
+        Me.TextBox_Index2.TabIndex = 0
+        Me.TextBox_Index2.Text = "0"
+        '
+        'TextBox_Index
+        '
+        Me.TextBox_Index.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox_Index.Location = New System.Drawing.Point(3, 6)
+        Me.TextBox_Index.Name = "TextBox_Index"
+        Me.TextBox_Index.ReadOnly = True
+        Me.TextBox_Index.Size = New System.Drawing.Size(109, 13)
+        Me.TextBox_Index.TabIndex = 1
+        Me.TextBox_Index.Text = "Page Number"
         '
         'LRU
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(669, 252)
+        Me.ClientSize = New System.Drawing.Size(669, 251)
         Me.Controls.Add(Me.PanelSummary)
         Me.Controls.Add(Me.ButtonNext)
         Me.Controls.Add(Me.PanelGrid)
@@ -592,7 +592,7 @@ Partial Class LRU
         Me.MaximumSize = New System.Drawing.Size(685, 290)
         Me.MinimumSize = New System.Drawing.Size(685, 290)
         Me.Name = "LRU"
-        Me.Text = "LRU"
+        Me.Text = "LRU Simulator"
         Me.PanelGrid.ResumeLayout(False)
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()

@@ -37,12 +37,13 @@ Partial Class Main
         'LFUBut
         '
         Me.LFUBut.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.LFUBut.FlatAppearance.BorderSize = 0
+        Me.LFUBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LFUBut.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LFUBut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.LFUBut.Location = New System.Drawing.Point(300, 364)
-        Me.LFUBut.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LFUBut.Location = New System.Drawing.Point(206, 285)
         Me.LFUBut.Name = "LFUBut"
-        Me.LFUBut.Size = New System.Drawing.Size(172, 86)
+        Me.LFUBut.Size = New System.Drawing.Size(115, 56)
         Me.LFUBut.TabIndex = 0
         Me.LFUBut.Text = "LFU"
         Me.LFUBut.UseVisualStyleBackColor = False
@@ -50,12 +51,12 @@ Partial Class Main
         'LRUbut
         '
         Me.LRUbut.BackColor = System.Drawing.Color.FromArgb(CType(CType(80, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(123, Byte), Integer))
+        Me.LRUbut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LRUbut.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LRUbut.ForeColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.LRUbut.Location = New System.Drawing.Point(834, 364)
-        Me.LRUbut.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.LRUbut.Location = New System.Drawing.Point(12, 285)
         Me.LRUbut.Name = "LRUbut"
-        Me.LRUbut.Size = New System.Drawing.Size(172, 86)
+        Me.LRUbut.Size = New System.Drawing.Size(115, 56)
         Me.LRUbut.TabIndex = 1
         Me.LRUbut.Text = "LRU"
         Me.LRUbut.UseVisualStyleBackColor = False
@@ -63,9 +64,10 @@ Partial Class Main
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(424, 584)
+        Me.Label2.Location = New System.Drawing.Point(283, 380)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(0, 20)
+        Me.Label2.Size = New System.Drawing.Size(0, 13)
         Me.Label2.TabIndex = 4
         '
         'Label3
@@ -73,9 +75,10 @@ Partial Class Main
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(596, 620)
+        Me.Label3.Location = New System.Drawing.Point(132, 431)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(111, 32)
+        Me.Label3.Size = New System.Drawing.Size(71, 24)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Visit Us"
         '
@@ -84,9 +87,10 @@ Partial Class Main
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(85, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(1143, 25)
+        Me.Button1.Location = New System.Drawing.Point(260, 11)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(91, 50)
+        Me.Button1.Size = New System.Drawing.Size(61, 32)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Exit"
         Me.Button1.UseVisualStyleBackColor = False
@@ -95,9 +99,10 @@ Partial Class Main
         '
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(444, -22)
+        Me.PictureBox2.Location = New System.Drawing.Point(22, -7)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(433, 358)
+        Me.PictureBox2.Size = New System.Drawing.Size(234, 239)
         Me.PictureBox2.TabIndex = 7
         Me.PictureBox2.TabStop = False
         '
@@ -105,18 +110,20 @@ Partial Class Main
         '
         Me.PictureBox1.BackgroundImage = Global.LFULRUSimulator.My.Resources.Resources.GitHub_Mark_Light_64px
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Location = New System.Drawing.Point(589, 507)
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Location = New System.Drawing.Point(134, 365)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(129, 97)
+        Me.PictureBox1.Size = New System.Drawing.Size(64, 64)
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
         '
         'Main
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(42, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1264, 744)
+        Me.ClientSize = New System.Drawing.Size(334, 461)
         Me.ControlBox = False
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button1)
@@ -125,11 +132,10 @@ Partial Class Main
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LRUbut)
         Me.Controls.Add(Me.LFUBut)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(1286, 800)
+        Me.MaximumSize = New System.Drawing.Size(350, 500)
         Me.MinimizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(1286, 800)
+        Me.MinimumSize = New System.Drawing.Size(350, 500)
         Me.Name = "Main"
         Me.Text = "LRUandLFU simulator"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class LFU
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class LFU
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.NextBut = New System.Windows.Forms.Button()
         Me.Input = New System.Windows.Forms.TextBox()
@@ -97,7 +97,7 @@ Partial Class LFU
         Me.NextBut.Name = "NextBut"
         Me.NextBut.Size = New System.Drawing.Size(116, 38)
         Me.NextBut.TabIndex = 0
-        Me.NextBut.Text = "Next"
+        Me.NextBut.Text = "Simulate"
         Me.NextBut.UseVisualStyleBackColor = True
         '
         'Input
@@ -281,7 +281,7 @@ Partial Class LFU
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(109, 13)
         Me.TextBox1.TabIndex = 4
-        Me.TextBox1.Text = "Buffer Counter"
+        Me.TextBox1.Text = "What in ""Buffer"""
         '
         'lastData
         '

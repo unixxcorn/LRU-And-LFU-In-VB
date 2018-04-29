@@ -32,4 +32,9 @@
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
 
     End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        Dim webAddress As String = "https://github.com/unixxcorn/LRU-And-LFU-In-VB"
+        Process.Start(webAddress)
+    End Sub
 End Class
